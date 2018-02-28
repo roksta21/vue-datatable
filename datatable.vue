@@ -24,6 +24,11 @@
             			<tr v-for="row in show_data" class="link" @click="goTo(row)">
             				<td v-for="i in columns_count">{{ row[columns[i - 1]] }}</td>
             			</tr>
+            			<tr v-if="show_data_count < 1">
+            				<td :colspan="columns_count">
+            					<div class="alert alert-warning">No data</div>
+            				</td>
+            			</tr>
             		</tbody>
             	</table>
             </div>
@@ -114,6 +119,10 @@
 				return processed_data.filter((row, index) => {
                     return (((this.current_page - 1) * this.show_rows) < (index + 1)) && ((index + 1) <= (this.current_page * this.show_rows));
                 });
+			},
+
+			show_data_count() {
+				return this.show_data.length;
 			}
 		},
 
