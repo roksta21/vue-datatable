@@ -15,14 +15,14 @@ The data passed down should an array with single node objects as its content.
 ```json
 [
 	{
-		'name': 'roksta',
-		'age': '24',
-		'location': 'Nairobi'
+		"name": "roksta",
+		"age": "24",
+		"location": "Nairobi"
 	},
 	{
-		'name': 'sam',
-		'age': '23',
-		'location': 'Kenya'
+		"name": "sam",
+		"age": "23",
+		"location": "Kenya"
 	},
 ]
 ```
